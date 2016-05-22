@@ -1,5 +1,7 @@
 Dockerized [standalone-migrations](https://github.com/thuss/standalone-migrations).
 
+DockerHub: https://hub.docker.com/r/hiogawa/standalone-migrations/
+
 ### Notes
 
 - You need to prepare `db` directory following [the documentation](https://github.com/thuss/standalone-migrations).
@@ -7,15 +9,4 @@ Dockerized [standalone-migrations](https://github.com/thuss/standalone-migration
 
 ### Usage
 
-Assume there is `db` directory:
-
-```
-$ docker pull hiogawa/standalone-migrations
-$ docker run -it --rm -v $PWD/db:/app/db hiogawa/standalone-migrations /bin/bash
-```
-
-From container shell prompt:
-
-```
-$ SHOW_SQL=yes rake db:migrate:status
-```
+Here is an example combining with docker-compose: https://github.com/hi-ogawa/docker-compose-standalone-migrations-example
